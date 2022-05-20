@@ -1,7 +1,10 @@
 # Ignore .log files
 *.log
 
-#Ignore Node Modules
+# Ignore Node Modules
 node_modules/
 package-lock.json
 package.json
+
+# Ignore connection string
+.env
