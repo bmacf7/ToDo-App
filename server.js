@@ -90,3 +90,10 @@ app.post("/update-item", (req, res) => {
     }
   );
 });
+
+app.post("/delete-item", (req, res) => {
+  let id = new ObjectId(req.body.id);
+  db.collection("items").deleteOne({ _id: id }, () => {
+    res.send("Success!");
+  });
+});
